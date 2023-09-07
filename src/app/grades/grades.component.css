@@ -1,0 +1,22 @@
+.abc{
+
+    height:300px ;
+    width:320px ;
+    background-color: aqua;
+     margin-left: 300px;
+     margin-top: 250px;
+      text-align: center;
+      padding-top: 50px
+      
+
+    }
+    
+    input{
+        border-radius: 5px;
+    }
+
+    .ab{
+        font-size:20px ;
+
+
+    }

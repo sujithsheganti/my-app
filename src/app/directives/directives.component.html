@@ -1,0 +1,57 @@
+<p>directives works!</p>
+
+<input type="number"[(ngModel)]="time">
+
+
+<h1 *ngIf="time<12">good morning</h1>
+<h1 *ngIf="time>12&&time<17">goodafternoon</h1>
+<h1 *ngIf="time>17">doo night</h1>
+
+
+
+
+
+
+<h1 *ngFor="let age of ages">Age is {{age}}</h1>
+<p *ngFor="let state of states ">{{state}}</p>
+
+<ul>
+    <li *ngFor="let state of states ">{{state}}</li>
+</ul>
+
+<select name="" id="">
+ <option value="">Telanaga</option>
+ <option value="">andhrapradesh</option>
+ <option value="">karnataka</option>
+ <option value="">Tamilnadu</option>
+</select>
+
+<h2 *ngFor="let user of users">Name is {{user.name}} and my age is {{user.age}}</h2>
+<input type="text"[(ngModel)]="term" (keypress)="filter()">
+<button (click)="ageHighToLow()">age high to low</button>
+<button (click)="increaseByone()">increase age by one</button>
+<button (click)="total()">total age</button>
+<table class="table table-dark table-bordered"> 
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>name</th>
+            <th>age</th>
+            <th>marks</th>
+            <th>phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.age |years}}</td>
+        <td [ngStyle]="{'color':user.marks> 35? 'green':'red'}">{{user.marks}}</td>
+        <td>{{user.phone}}</td>
+        <td>
+            <button class="btn btn-danger"(click)="delete(i)">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>

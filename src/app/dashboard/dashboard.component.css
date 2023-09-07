@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.left {
+
+    background-color: rgb(223, 79, 79);
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    margin-top: 0px;
+
+}
+
+.right {
+    width: 80%;
+    height: 100%;
+    background-color: yellow;
+    overflow: auto;
+}
+
+.left h4:hover {
+    cursor: pointer;
+    background-color: gray;
+
+}

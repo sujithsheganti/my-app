@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<div class="parent">
+  <div class="left">
+      <h3>Dashboard</h3>
+      <hr>
+       <h4 routerLink="home">Home</h4>
+       <h4 routerLink="about">about</h4>
+
+       <h4 routerLink="calculator">calculator</h4>
+       <h4 routerLink="bmi">BMI</h4>
+       <h4 routerLink="rectangle">rectangle</h4>
+       <h4 routerLink="directive">Directive</h4>
+       <h4 routerLink="table">Table</h4>
+       <h4 routerLink="pipes">pipes</h4>
+       <h4 routerLink="grades">grades</h4>
+       <h4 routerLink="Random">Random</h4>
+       <h4 routerLink="bank">bank</h4>
+       <h4 routerLink="users">users</h4>
+       <h4 routerLink="vehicles">vehicles</h4>
+        <h4 routerLink="accounts">accounts</h4>
+       <h4 routerLink="flipkart">flipkart</h4>
+        <h4 routerLink="mails">mails</h4>
+        <h4 routerLink="boredoms">boredoms</h4>
+         <h4 routerLink="photo.gallery">photogallery</h4>
+         <h4 routerLink="books">books</h4>
+         <h4 routerLink="createvehicle">createvahicle</h4>
+        <h4 routerLink="createuser">createuser</h4>
+        <h4 routerLink="createaccount">createaccount</h4>
+        <hr>
+
+       <button (click)="logout()">Logout</button>
+   </div>
+     <div class="right">
+        <router-outlet></router-outlet>
+   </div>
+</div>

@@ -1,0 +1,11 @@
+<p>filpkart works!</p>
+<div class="parent">             
+<div class="child" *ngFor="let f of flipkarts">            
+    <img src="{{f.image}}" alt="" width="100px" height="100px">
+    <p>{{f.price|price}}</p>
+    <p>{{f.category}}</p>
+    <p class="des">{{f.description}}</p>
+     <p>{{f.rating.rate}}</p>
+     <p>{{f.rating.count}}</p>
+     <div>
+</div>

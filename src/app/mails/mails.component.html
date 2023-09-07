@@ -1,0 +1,15 @@
+<p>mails works!</p>
+
+<div class="parent">
+  <div class="email" *ngFor="let mail of mails">
+   <div class="pic">
+    <img src="assets/icic logo.png" alt="">
+   </div>
+  <div class="description"[ngStyle]="{'color':mail.completed==true ?'gray':'black'}">
+      <h4>{{mail.userid}}</h4>
+      <h4>{{mail.id}}</h4>
+      <h4>{{mail.title}}</h4>
+      <h4>{{mail.completed}}</h4>
+   </div>
+   </div>
+</div>

@@ -1,0 +1,75 @@
+<input type="text" [(ngModel)]="term" (keypress)="getfilteredVehicles()">
+
+<label>column</label>
+<select [(ngModel)]="column">
+    <option>color</option>
+    <option>fuel</option>
+</select>
+  <label>order</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+
+<button (click)="getSortedVehicles()">sort</button>
+
+
+<table class="table table-dark table-bordered">
+     <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>id</th>
+            <th></th>
+        </tr>
+
+     </thead>
+
+     <tbody>
+        <tr *ngFor="let v of vehicles">
+            <td>{{v.Vehicle}}</td>
+            <td>{{v.manufacturer}}</td>
+            <td>{{v.model}}</td>
+
+            <td>{{v.type}}</td>
+            <td>{{v.fuel}}</td>
+            <td>{{v.color}}</td>
+            <td><img src="{{v.image}}" alt=""></td>
+            <td>{{v.id}}</td>
+            
+          <td>
+            <button class="btn btn-danger"(click)="deleteVehicle(v.id)">Delete</button>
+        </td>
+
+
+        </tr>
+
+        <label></label>
+        <select [(ngModel)]="limit">
+           <option >3</option>
+           <option>5</option>
+           <option>10</option>
+           <option >15</option>
+           </select>
+           <label >page</label>
+           <select [(ngModel)]="page">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+           </select>
+        <button (click)="getpagedVehicle()">page</button>
+
+
+     </tbody>
+
+
+
+
+
+</table>

@@ -1,0 +1,20 @@
+<p>createuser works!</p>
+
+<h3>create user form</h3>
+<div class="parent">
+<form  [formGroup]="userform">
+    <label >name:</label>
+    <input type="text" formControlName="name"><br>
+    <label >Phone:</label>
+    <input type="number"formControlName="phone"><br>
+    <label >city:</label>
+    <input type="text"formControlName="city"><br>
+    <label >fee:</label>
+    <input type="number"formControlName="fee"><br>
+    <label >id:</label>
+    <input type="number"formControlName="id"><br>
+<button class="btn btn-warning"(click)="submit()">submit</button>
+
+
+
+</form>

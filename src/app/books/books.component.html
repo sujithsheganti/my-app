@@ -1,0 +1,35 @@
+<p>books works!</p>
+<div class="parent">
+    <div class="child" *ngFor="let book of books">
+        <div class="top">
+            <div class="top1">
+                <h1>{{book.data.author}}</h1>
+                <p>{{book.data.birthday}}</p>>
+                <p>{{book.data.birthplace}}</p>
+
+            </div>
+
+        </div>
+       <div class="middle">
+        <div class="m1" *ngFor="let a of book.data.books">
+            <select name="action">
+               <option>edit</option>
+               <option>delete</option>
+               <option >selected</option>
+
+            </select>
+            <img src="{{a.imageUrl}}" width="250px" height="150px">
+            <h4>{{ a.title}}</h4>
+            <h4>{{a.publish}}</h4>
+            <!-- <a id="A" href={{"a.purchaseLink"}} class="btn btn-primary">Buy book</a>
+             -->
+             <a href="{{a.purchaseLink}}" class="btn-btn-primary">buy book</a>
+
+        </div>
+
+       </div>
+
+    </div>
+
+
+</div>

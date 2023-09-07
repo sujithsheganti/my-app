@@ -1,0 +1,41 @@
+<p>table works!</p>
+<div>
+    <input type="text" placeholder="Search" [(ngModel)]="term"(keypress)="filter()">&nbsp;&nbsp;
+    <button (click)="onlyfreed()"> only free delivery </button>
+
+    <div class="A">
+        <button (click)="pricelowtoheigh()"> Price low to heigh</button>
+        <button (click)="priceheightolow()"> Price heigh to low</button>
+        <button>rating low to heigh</button>&nbsp;&nbsp;
+        <button>rating heigh to low</button>
+    </div><br>
+    <div class="B">
+        <button (click)="discount()">Apply 50% discount</button>&nbsp;&nbsp;
+        <button (click)="delivery()">price with delivary charges</button>
+    </div><br>
+    <div class="C">
+    <button (click)="total()">Total price</button>
+    <button (click)="cartitems()">price with delivery charges</button>
+     </div>
+</div>
+
+<div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>product Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free delivery</th>
+        </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.productname}}</td>
+                <td>{{product.price | price}}</td>
+                <td>{{product.rating}}</td>
+                <td>{{product.freedelivery}}</td>
+              </tr>
+          </tbody>
+    </table>
+</div>

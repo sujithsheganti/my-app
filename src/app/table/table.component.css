@@ -1,0 +1,46 @@
+.A button{
+
+    margin: 5px 10px;
+    background-color: rgb(105, 105, 223);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+button{
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(216, 123, 123);
+     color: white;
+}
+.table{
+
+    margin-top: 70px;
+}
+
+input{
+
+    margin-left: 30px;
+    width: 250px;
+    height:40px;
+    border-radius: 5px;
+}
+
+.B button{
+ margin: 5px 10px;
+ background-color: rgb(93, 184, 51);
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  margin-left: 30px;
+}
+.C button{
+
+    margin-left: 30px;
+    background-color: rgb(255, 0, 191);
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}

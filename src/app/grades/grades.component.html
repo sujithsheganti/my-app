@@ -1,0 +1,16 @@
+
+<div class="abc">
+<label class="ab"for="">Marks: </label>&nbsp;
+<input type="text" [(ngModel)]="marks">
+
+<h1 *ngIf="marks<=100&&marks>90">Grade A</h1>
+<h1 *ngIf="marks<89&&marks>=80">Grade B</h1>
+<h1 *ngIf="marks<79&&marks>=50">Grade C</h1>
+<h1 *ngIf="marks<49&&marks>=35">Grade D</h1>
+<h1 *ngIf="marks<35&&marks>=0">Fail</h1>
+
+
+
+
+<h2>Result is {{result}}</h2>
+</div>

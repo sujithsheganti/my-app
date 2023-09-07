@@ -1,0 +1,17 @@
+.parent{
+    height: 30%;
+    width: 50%;
+    background-color: antiquewhite;
+    margin-left: 200px;
+    text-align: center;
+    margin-top: 200px;
+    
+}
+
+
+button{
+    margin: 0 10px;
+    color: antiquewhite;
+    background-color: blue;
+    border-radius: 5px;
+}
