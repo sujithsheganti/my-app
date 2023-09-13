@@ -1,20 +1,80 @@
-<p>createuser works!</p>
 
 <h3>create user form</h3>
 <div class="parent">
 <form  [formGroup]="userform">
     <label >name:</label>
     <input type="text" formControlName="name"><br>
+    <div class="text-danger" *ngIf="userform.get('name')?.touched&&userform.get('name')?.invalid">
+      <p *ngIf="userform.get('name')?.errors?.['required']">name is required</p>
+      <p *ngIf="userform.get('name')?.errors?.['minlength']">name should be min 3 characters</p>
+    </div>
     <label >Phone:</label>
     <input type="number"formControlName="phone"><br>
+    <div class="text-danger" *ngIf="userform.get('phone')?.touched&&userform.get('phone')?.invalid">
+      <p *ngIf="userform.get('phone')?.errors?.['required']"> phone number is required<p>
+      <p *ngIf="userform.get('phone')?.errors?.['max']">12 digits are allowed</p>
+      <p *ngIf="userform.get('phone')?.errors?.['min']">10 digits are allowed</p>
+    </div>
     <label >city:</label>
     <input type="text"formControlName="city"><br>
     <label >fee:</label>
     <input type="number"formControlName="fee"><br>
     <label >id:</label>
     <input type="number"formControlName="id"><br>
+    <div formGroupName="address">
+        <label>hno:</label>
+        <input type="text" formControlName="hno"><br>
+        <label >state</label>
+        <input type="text" formControlName="state"><br>
+
+        <label>pin</label>
+        <input type="text" formControlName="pin"><br>
+
+    </div>
+
+<button (click)="addCard()">addcard</button>
+<div formArrayName="cards">
+   <div *ngFor="let card of cardsFormArray.controls; let i=index">
+      <div formGroupName="{{i}}">
+        <label >no:</label>
+        <input type="number" formControlName="no"><br>
+        <label >exp</label>
+        <input type="month" formControlName="exp"><br>
+        <label>cvv</label>
+        <input type="number" formControlName="cvv"><br>
+        <div class="text-danger" *ngIf="cardsFormArray.controls[i]?.get('cvv')?.touched&&cardsFormArray.controls[i]?.get('cvv')?.invalid">
+          <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['required']"> cvv is required</p>
+          <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['min']"> CVV atleast 100.</p>
+          <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['max']">CCV almost 999</p>
+
+        </div>
+
+        <button (click)="deleteCard(i)">delete</button>
+      </div>
+    </div>
+    
+</div>
+
+<label >type:</label>
+<input type="radio" name="type" formControlName="type" value="dayscholor">
+<label >day scholor</label>
+<input type="radio" name="type" formControlName="type" value="residential">
+<label> residential</label>
+<br>
+<div *ngIf="userform.get('type')?.value=='dayscholor'">
+    <label>bus fee</label>
+    <input type="number" formControlName="busfee">
+
+  <br>
+</div>
+<div *ngIf="userform.get('type')?.value=='residential'">
+    <label >hostel fee</label>
+    <input type="number" formControlName="hostelfee">
+    <br>
+</div>
 <button class="btn btn-warning"(click)="submit()">submit</button>
 
 
 
 </form>
+</div>

@@ -19,6 +19,7 @@ body {
     height: 100%;
     text-align: center;
     margin-top: 0px;
+    overflow: auto;
 
 }
 
@@ -27,10 +28,12 @@ body {
     height: 100%;
     background-color: yellow;
     overflow: auto;
+   
+
 }
 
 .left h4:hover {
     cursor: pointer;
     background-color: gray;
-
+    
 }
