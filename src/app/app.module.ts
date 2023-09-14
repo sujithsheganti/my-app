@@ -38,6 +38,10 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 
+import { NavComponent } from './nav/nav.component';
+import { ItemComponent } from './item/item.component';
+import { CartComponent } from './cart/cart.component';
+
 
 
 @NgModule({
@@ -74,10 +78,9 @@ import { ChildComponent } from './child/child.component';
     VehicleDetailsComponent,
     ParentComponent,
     ChildComponent,
-
-  
-
-
+    NavComponent,
+    ItemComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,9 @@ import { notifyGuard } from './notify.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { NavComponent } from './nav/nav.component';
+import { ItemComponent } from './item/item.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -59,7 +62,10 @@ const routes: Routes = [
        {path:'vehicle-details/:id',component:VehicleDetailsComponent},
        {path:'edit-vehicle/:id',component:CreatevehicleComponent},
       {path:'parent',component:ParentComponent},
-      {path:'child',component:ChildComponent}
+      {path:'child',component:ChildComponent},
+      {path:'nav',component:NavComponent},
+      {path:'item',component:ItemComponent},
+      {path:'cart',component:CartComponent}
     ]},
 ];
 

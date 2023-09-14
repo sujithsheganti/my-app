@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 
 
 <p>parent works!</p>
@@ -7,9 +7,22 @@
   <app-child [ac]="ap" (bEvent)="catch($event)"></app-child>
     <h1>bp :{{bp}}</h1>
 </div> 
+ 
+<input type="number" [(ngModel)]="rating"> -->
 
-<!-- <div> -->
-    <!-- <input type="text" [(ngModel)]="ap"> -->
-    <!-- <p>bp:{{bp}}</p> -->
-    <!-- <app-child [ac]="ap" (bEvent)="catch($event)"></app-child> -->
-<!-- </div> -->
+<!-- <app-child [rate]="rating"></app-child>
+<app-child [caluclate]="parent"></app-child>
+<app-child [caluclate]="child"></app-child> -->
+<br><br><br><br>
+<div class="parent">
+
+<div class="calculator">
+ <label >num1</label>
+ <input type="number" [(ngModel)]="parent"><br>
+ <label>num2</label>
+ <input type="number" [(ngModel)]="children"><br>
+ <h2>Result is:{{result}}</h2>
+
+ <app-child [num1]="parent" [num2]="children" (cal)="catch($event)" ></app-child>
+</div>
+</div>
